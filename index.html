@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission 01 | Healthy Smart Cities</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top right, #0a0f29, #101726, #05070d);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      overflow-x: hidden;
+    }
+
+    header {
+      animation: fadeIn 1s ease forwards;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #00f0ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      max-width: 750px;
+      margin: 0 auto 50px;
+      font-size: 1.2rem;
+      color: #cfd8e3;
+      line-height: 1.7;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+      animation: fadeInUp 1.4s ease forwards;
+    }
+
+    .city-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 25px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+    }
+
+    .city-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    }
+
+    .city-card h3 {
+      color: #00eaff;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #7a8aa0;
+      animation: fadeIn 1.6s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Floating background lights */
+    .glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      filter: blur(150px);
+      opacity: 0.4;
+      z-index: -1;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .glow.one {
+      top: 10%;
+      left: 10%;
+      background: #0072ff;
+      animation-delay: 0s;
+    }
+
+    .glow.two {
+      bottom: 15%;
+      right: 10%;
+      background: #00f0ff;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow one"></div>
+  <div class="glow two"></div>
+
+  <header>
+    <h1>Mission 01</h1>
+  </header>
+
+  <p>
+    Healthy cities are more than spaces to live — they are ecosystems of innovation,
+    sustainability, and human well-being. Our mission focuses on reimagining urban life
+    through technology, clean energy, and smart design to ensure every heartbeat of the city
+    thrives in harmony with the planet.
+  </p>
+
+  <div class="city-grid">
+    <div class="city-card">
+      <h3>Singapore</h3>
+      <p>Futuristic architecture meets nature. Singapore uses AI-driven waste systems, smart healthcare, and vertical gardens to promote wellness.</p>
+    </div>
+    <div class="city-card">
+      <h3>Copenhagen</h3>
+      <p>The city of bikes and clean energy. Copenhagen aims to be carbon-neutral by 2025, blending innovation with citizen happiness.</p>
+    </div>
+    <div class="city-card">
+      <h3>Tokyo</h3>
+      <p>Tokyo’s smart city initiatives use real-time data to enhance safety, efficiency, and the health of millions of residents.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Mission 01 — NASA Space Apps Challenge</p>
+  </footer>
+</body>
+</html>
